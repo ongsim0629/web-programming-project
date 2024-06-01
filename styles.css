@@ -108,6 +108,77 @@
     background-color: #33573e !important;
 }
 
+.keyword-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.keyword {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.keyword:hover {
+    background-color: #45a049;
+}
+.keyword.selected {
+    background-color: #2e7d32;
+}
+.content {
+    display: none; /* 기본적으로 숨김 */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.keyword-title {
+    font-weight: bold;
+}
+
+.circle-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.circle {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #28a745;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.circle-title {
+    font-weight: bold;
+}
+
+.circle-text {
+    font-size: 14px;
+    color: #fff;
+}
+
+.ranking {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.ranking p {
+    margin: 5px 0;
+}
+
+
+
 
 @media (max-width: 768px) {
     .container-book {
