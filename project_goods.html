@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지속 가능한 상품 및 브랜드 리뷰</title>
+   <!-- 폴더 내부 CSS -->
+   <link rel="stylesheet" href="styles.css">
+   <!-- 외부 CSS -->
+   <link rel="stylesheet" href="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/easygpt/default.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+   <!-- 외부 JS -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+   <!-- Font Awsome 아이콘 -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+   <!-- lightbox 스타일 -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <style>
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    .card-img-top {
+        width: 100%;
+        height: auto;
+    }
+    .card-body {
+        padding: 20px;
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+     <!-- 네비게이션 바 -->
+    <section id="intro" class="hero">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                <div class="container">
+                    <a class="navbar-brand" href="project_index.html">홈</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="project_event.html">환경 관련 이벤트</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="project_education.html">교육자료</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="project_goods.html">환경 관련 상품</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="project_practice.html">🌿실천 방법</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="project_qa.html">문의하기</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <h1>우리가 만드는 작은 변화</h1>
+            <p>실천으로 시작해요</p>
+        </div>
+    </section>
+
+    <!-- 지속 가능한 상품 및 브랜드 리뷰 컨테이너 -->
+    <div class="container"  id="review-container">    
+    </div>
+
+</body>
+
+<script>
+    // 상품 및 브랜드 정보(JSON 형식)
+    var reviews = [
+        {
+            "name": "프라이탁",
+            "image": "https://www.esquirekorea.co.kr/resources_old/online/org_thumnail_image/eq/fa61343a-d3e9-4b7c-801f-01a51d0c357e.jpg",
+            "description": "프라이탁은 업사이클링 브랜드의 시초로, 현재 유행하는 패션트렌드인 Y2K패션과 아메리칸 빈티지와 잘 어울려 MZ세대들의 인기를 얻고 있습니다. 트럭 방수천을 재활용하기 때문에 모두 다른 원단을 쓰고 있어서 같은 모델이라도 각기 다른 패턴의 아이템이 나오게 되고, 이것이 사이즈별로 전시되는 게 아니라 각각의 개별 상품으로 판매됩니다.",
+            "link": "https://www.freitag.ch/en/"
+        },
+        {
+            "name": "러쉬",
+            "image": "https://cdn.iconsumer.or.kr/news/photo/202010/13349_17167_1352.jpg",
+            "description": "러쉬는 1995년 영국에서 시작된 브랜드로, 신선한 유기농 과일과 채소 그리고 자연치유 효과가 있는 꽃과 식물을 이용해 천연 화장품을 만드는 브랜드입니다. 러쉬는 설립 초기부터 환경보호, 동물 실험 반대, 과대 포장 반대 등 사회적인 문제 해결에 적극적으로 동참하며, 소비자들의 지지를 얻고 있습니다.",
+            "link": "https://www.lush.co.kr/"
+        },
+        {
+            "name": "아이시스",
+            "image": "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FFM8HZ%2FbtrXnJIhlMk%2FjUKDPuKFKdjAEnB5l91REK%2Fimg.png",
+            "description": "롯데칠성음료의 ‘아이시스 ECO’ 는 국내 최초로 음료의 라벨지를 제거했습니다. 그동안 라벨에 기재되었던 수원지, 제조 일자, 유통기한 등은 제품 표면에 음각으로 표시하는 방식으로 바뀌었습니다. ",
+            "link": "https://company.lottechilsung.co.kr/kor/brand/icis/contentsid/627/index.do"
+        },
+        {
+            "name": "케이스티파이",
+            "image": "https://i0.wp.com/evanblog.co.kr/wp-content/uploads/2024/01/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7-2024-01-02-%EC%98%A4%ED%9B%84-10.41.09-optimized.png",
+            "description": "케이스티파이의 클리어 케이스는 대나무와 옥수수전분, 펠릿과 같은 65% 재활용 & 식물성 소재와 100% 재활용할 수 있는 패키지로 제작됐고 케이스티파이 링 테두리에 적용된 ‘CASETiFY’ 폰트는 비건 레더처럼 친환경 잉크 프린트로 인쇄되었습니다. 또한 케이스가 판매될 때마다 나무를 기부하는 지구의 날 네트워크를 운영하고 있습니다.",
+            "link": "https://www.casetify.com/ko_KR/"
+        }
+    ];
+
+
+    // 리뷰 컨테이너에 상품 및 브랜드 리뷰 추가 -> JQuery 라이브러리인 lightbox 사용
+    $(document).ready(function () {
+        var container = $('#review-container');
+        $.each(reviews, function (index, review) {
+            var html = `
+                <div class="card">
+                    <a href="${review.image}" data-lightbox="review-gallery" data-title="${review.name}">
+                        <img src="${review.image}" class="card-img-top" alt="${review.name}">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">${review.name}</h5>
+                        <p class="card-text">${review.description}</p>
+                        <a href="${review.link}" class="btn btn-primary">자세히 보기</a>
+                    </div>
+                </div>
+            `;
+            container.append(html);
+        });
+    });
+    </script>
+
+</html>
