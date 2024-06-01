@@ -1,0 +1,114 @@
+.hero {
+    background: linear-gradient(135deg, #72f27d 0%, #0c7434 100%);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.5rem;
+}
+.hero p {
+    font-size: 1.25rem;
+}
+/* 네비게이션 바를 절대 좌표로 고정 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.navbar-scroll {
+    transition: background-color 0.3s ease; 
+}
+.navbar-brand {
+    font-size: 24px;
+    color: white !important;
+}
+.navbar-nav .nav-link {
+    font-size: 18px;
+    color: white !important;
+    margin-left: 20px;
+    padding-bottom: 30px;
+    transition: color 0.3s ease;
+}
+
+.navbar.scrolled .nav-link {
+    color: #333 !important;
+}
+
+.navbar.scrolled .navbar-brand {
+    color: #333 !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #556B2F !important;
+}
+
+.container-book {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+.left-page,.right-page {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(01, 0, 0, 0.1);
+}
+.left-page {
+    background-color: #f8f9fa;
+}
+.right-page {
+    background-color: white;
+}
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+.card {
+    margin-bottom: 20px;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-number {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #333;
+}
+
+.header-dark {
+    background-color: #33573e !important;
+}
+
+
+@media (max-width: 768px) {
+    .container-book {
+        flex-direction: column;
+    }
+    .left-page,.right-page {
+        width: 100%;
+    }
+    .navbar-nav {
+    background-color: rgba(12, 116, 52, 0.9);
+    border-radius: 10px;
+    }
+} 
