@@ -70,6 +70,15 @@
     background-color: #218838;
     border-color: #1e7e34;
 }
+.btn-primary {
+    background-color: #0c7434 !important;
+    border-color: #0c7434 !important;
+}
+
+.btn-primary:hover {
+    background-color: #0a5d2f !important;
+    border-color: #0a5d2f !important;
+}
 .card {
     margin-bottom: 20px;
 }
