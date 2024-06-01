@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>환경 관련 행사 및 이벤트</title>
+    <!-- 폴더 내부 CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- 외부 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- 외부 JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- Font Awsome 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+
+</head>
+
+<body>
+    <!-- 네비게이션 바 -->
+    <section id="intro" class="hero">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                <div class="container">
+                    <a class="navbar-brand" href="project_index.html">홈</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="project_event.html">환경 관련 이벤트</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="project_education.html">교육자료</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="project_goods.html">환경 관련 상품</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="project_practice.html">🌿실천 방법</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="project_qa.html">문의하기</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <h1>우리가 만드는 작은 변화</h1>
+            <p>실천으로 시작해요</p>
+        </div>
+    </section>
+    
+    <br><br>
+    <!-- 환경과 관련된 행사나 이벤트를 추천해주는 컨텐츠 관련 컨테이너 -->
+    <div class="container" id="event-container">
+        <div class="slider">
+            <!-- 이벤트 정보는 JavaScript로 동적으로 채워집니다 -->
+        </div>
+    </div>
+
+    <script>
+        // 행사 및 이벤트 정보(JSON 형식)
+        var events = [
+            {
+                "title": "2024년 기후위기 적응 그림 공모전",
+                "image": "https://kaccc.kei.re.kr/home/editorImgView.es?fileName=20240513112042577.jpg",
+                "date": "5/13 ~ 6/28",
+                "location": "KEI 국가기후위기적응센터 홈페이지(kaccc.kei.re.kr)",
+                "description": "공모전 : 기후위기! 지구인 생존방법?!<br>□ 공모부문 : 기후위기 적응 아이디어 그림(일러스트, 포스터, 상상그리기 등)<br>※ 형식 : 작품 표현 방식 및 사용 재료 제한 없음<br>□ 공모주제 :기후위기에 적응한 모습 또는 그 중요성을 담은 그림<br>①의·식·주 등 우리 생활 속 적응 실천방법<br>②폭염, 한파, 폭우 등 기후 위기에 적응하는 방법<br>③기후변화를 새로운 기회로 전환시키는 사회에 대한 자유주제<br>□ 참가대상 : 전 국민 누구나 (단체 참여 불가)",
+                "link": "https://kaccc.kei.re.kr"
+            },
+            {
+                "title": "우리동네 환경지키미(제로웨이스트) 참여자 모집",
+                "image": "https://1in.seoul.go.kr/commonfile/fileidDownLoad.do?file_id=018FC841399F4470664DB9BF31427A2A",
+                "date": "05/30 ~ 06/14",
+                "location": "온라인 접수",
+                "description": "환경에 관심이 많은 1인가구<br>평소 제로웨이스트를 실천하는 1인가구<br>환경을 소중히 다루는 따스한 마음을 가진 1인가구<br>우리동네 환경지키미를 통해<br>가치소비의 필요성에 대해 함께 공부하고<br>나만의 머그컵도 함께 만들어보아요♥<br>1인가구분들의 많은 관심과 참여 부탁드립니다:)",
+                "link": "https://geumchfc.familynet.or.kr/center/lay1/program/S295T322C451/recruitReceipt/list.do?rows=5&cpage=1&cat=&program_statuses=&area=A001&area_detail=D017&application_type=on&multicultural_type=language_development&program_start_date=2024-05-30&program_end_date=2025-05-30&keyword=%EC%9A%B0%EB%A6%AC%EB%8F%99%EB%84%A4+%ED%99%98%EA%B2%BD%EC%A7%80%ED%82%A4%EB%AF%B8"
+            },
+            {
+                "title": "2024 마포구 환경교육 한마당 안내",
+                "image": "https://www.kosenv.or.kr/upload/event/20240523144253600.jpg",
+                "date": "6/3 ~ 6/10",
+                "location": "마포구청/서울시마포구환경교육센터 (자연의벗연구소)",
+                "description": "자연을 위해 가장 먼저 행동하는 자연의 친구, 자연의벗연구소입니다.<br>자연의벗연구소는  마포구가 지정한 서울시마포구환경교육센터로 환경실천과 환경교육 등 다양한 활동을 펼치고 있습니다.<br>6월 5일 환경의 날이 있는 첫번째 주는 환경부가 지정한  '환경교육'주간으로  환경교육의 중요성을 알리고 최신 환경주제를 배울 수 있는 다양한 장이 전국에서 펼쳐집니다.<br>마포구에서는 지난해에 이어 마포의 15개소와 함께   지구마블 마포투어,  마포구환경교육한마당이 열립니다. 지구를 사랑하는 분들의 많은 참여바랍니다. <br>🔔 2024 마포구환경교육한마당<br>2024 우리 동네 마포의 에코히어로들을 만나는 일주일간의 투어!<br>자원순환/에너지/채식/자연생태/환경책/예술/디지털 등 평소 관심있던 주제가 있으시다면 다양한 분야에서 활동하는 환경인들을 이번 마포투어에서 만나보시면 어떨까요?",
+                "link": "https://forms.gle/1e28FjkXYBPH3b1y5"
+            },
+            {
+                "title": "제로 서울 줍깅 캠페인",
+                "image": "https://www.dailyt.co.kr/data/dlt/image/2024/05/31/dlt202405310007.600x.0.png",
+                "date": "5/20 ~ 6/4",
+                "location": "중구, 광화문, 송파구 일대",
+                "description": "‘줍깅’은 ‘줍다’와 ‘조깅’을 합친말로 걷거나 뛰면서 쓰레기를 줍는 환경정화 활동으로 이번 캠페인은 서울시에서 운영하는 ‘제로서울 기업실천단’의 친환경 봉사활동 일환으로 기획됐습니다. <br> 제로서울 기업실천단은 2050 탄소중립 실현을 위해 기후위기 대응 실천에 앞장서는 민관협력 네트워크로 쓰레기봉투, 집게 등으로 구성된 친환경 플로깅 키트를 지원해드려요!",
+                "link": "https://kaccc.kei.re.kr"
+            },
+            {
+                "title": "잠수교 『찐』 플리마켓 특별이벤트",
+                "image": "https://hangang.seoul.go.kr/www/file/editorImage.do?fileNm=fd56fb6dd4fb447e91134348436046a9.jpg&day=202405",
+                "date": "5/5 ~ 10/27 매주 일요일",
+                "location": "잠수교 남단",
+                "description": "작년 국내외 관광객 약 200만명이  방문하여 <br> 국내 대표 K-축제로 자리매김한 ‘차 없는 잠수교 뚜벅뚜벅 축제’<br> 올해는 반포한강공원 잠수교 남단에 이어 <br> 잠수교 북단과 반포 수변무대까지 축제공간을 확장하고<br>주차별로 다른 주제로 진행되는 특별프로그램 등  <br> 더욱 풍성하고 즐거운 프로그램으로 돌아왔습니다.",
+                "link": "https://hangang.seoul.go.kr/www/eventMng/detail.do?srchType=list&mid=538&evntSn=181"
+            }
+        ];
+
+        // 행사 및 이벤트 슬라이더 생성
+        $(document).ready(function () {
+            var sliderContainer = $('.slider');
+            $.each(events, function (index, event) {
+                var slide = `
+                    <div class="slide">
+                        <div class="card">
+                            <img src="${event.image}" class="card-img-top" alt="${event.title}">
+                            <div class="card-body">
+                                <h5 class="card-title">${event.title}</h5>
+                                <p class="card-text"><strong>Date:</strong> ${event.date}</p>
+                                <p class="card-text"><strong>Location:</strong> ${event.location}</p>
+                                <p class="card-text">${event.description}</p>
+                                <a href="${event.link}" class="btn btn-primary">자세히 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                sliderContainer.append(slide);
+            });
+
+            // Slick 슬라이더 설정
+            $('.slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true,
+                prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+                nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+</body>
+
+</html>
